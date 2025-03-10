@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-sinf o'quv kurslari</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .course {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+            cursor: pointer;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        #content {
+            background: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>1-sinf o'quv kurslari</h1>
+    
+    <div class="course">
+        <h2>1-sinf mavzulari</h2>
+        <ul>
+            <li><a onclick="loadContent('alphabet')">Alphabet</a></li>
+            <li><a onclick="loadContent('numbers')">Numbers</a></li>
+            <li><a onclick="loadContent('colors')">Colors</a></li>
+            <li><a onclick="loadContent('family')">Family</a></li>
+            <li><a onclick="loadContent('school')">School</a></li>
+            <li><a onclick="loadContent('toys')">Toys</a></li>
+            <li><a onclick="loadContent('body-parts')">Body Parts</a></li>
+            <li><a onclick="loadContent('clothes')">Clothes</a></li>
+            <li><a onclick="loadContent('food')">Food</a></li>
+            <li><a onclick="loadContent('animals')">Animals</a></li>
+        </ul>
+    </div>
+
+    <div id="content">
+        <h2>Mavzuni tanlang</h2>
+        <p>Ushbu bo'limda mavzu tanlanganidan keyin kontent ko'rsatiladi.</p>
+    </div>
+
+    <script>
+        function loadContent(topic) {
+            const contents = {
+                "alphabet": "<h2>Alphabet</h2><p>Bu bo'limda bolalar A-Z harflarini o'rganishadi.</p>",
+                "numbers": "<h2>Numbers</h2><p>0 dan 10 gacha bo'lgan sonlarni sanash.</p>",
+                "colors": "<h2>Colors</h2><p>Ranglarni tanib olish va nomlash.</p>",
+                "family": "<h2>Family</h2><p>Oila a'zolarini tanishtirish.</p>",
+                "school": "<h2>School</h2><p>Maktabda ishlatiladigan so'zlar.</p>",
+                "toys": "<h2>Toys</h2><p>O'yinchoqlar haqida gaplashish.</p>",
+                "body-parts": "<h2>Body Parts</h2><p>Tanadagi a'zolar nomlari.</p>",
+                "clothes": "<h2>Clothes</h2><p>Kiyim-kechak nomlarini o'rganamiz.</p>",
+                "food": "<h2>Food</h2><p>Ovqat va ichimliklar haqida gaplashish.</p>",
+                "animals": "<h2>Animals</h2><p>Hayvonlarning nomlari va ovozlari.</p>",
+            };
+
+            document.getElementById("content").innerHTML = contents[topic] || "<h2>Mavzu topilmadi</h2>";
+        }
+    </script>
+
+</body>
+</html>

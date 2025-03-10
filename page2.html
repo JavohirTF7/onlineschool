@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-2 sinf o'quv kurslari</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .course {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+            cursor: pointer;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        #content {
+            background: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    
+
+
+    <div class="course">
+        <h2>2-sinf mavzulari</h2>
+        <ul>
+            <li><a onclick="loadContent('transportation')">Transportation</a></li>
+            <li><a onclick="loadContent('she-has-he-has')">She has / He has</a></li>
+            <li><a onclick="loadContent('pets')">Pets</a></li>
+            <li><a onclick="loadContent('plural-nouns')">Plural nouns</a></li>
+            <li><a onclick="loadContent('adjective')">Adjective</a></li>
+            <li><a onclick="loadContent('be-helpful')">Be helpful</a></li>
+            <li><a onclick="loadContent('clothes-2')">Clothes</a></li>
+            <li><a onclick="loadContent('what-are-you-wearing')">What are you wearing?</a></li>
+            <li><a onclick="loadContent('share-things')">Share things</a></li>
+            <li><a onclick="loadContent('rooms')">Rooms</a></li>
+        </ul>
+    </div>
+
+    <div id="content">
+        <h2>Mavzuni tanlang</h2>
+        <p>Ushbu bo'limda mavzu tanlanganidan keyin kontent ko'rsatiladi.</p>
+    </div>
+
+    <script>
+        function loadContent(topic) {
+            const contents = {
+                "alphabet": "<h2>Alphabet</h2><p>Bu bo'limda bolalar A-Z harflarini o'rganishadi.</p>",
+                "numbers": "<h2>Numbers</h2><p>0 dan 10 gacha bo'lgan sonlarni sanash.</p>",
+                "colors": "<h2>Colors</h2><p>Ranglarni tanib olish va nomlash.</p>",
+                "family": "<h2>Family</h2><p>Oila a'zolarini tanishtirish.</p>",
+                "school": "<h2>School</h2><p>Maktabda ishlatiladigan so'zlar.</p>",
+                "toys": "<h2>Toys</h2><p>O'yinchoqlar haqida gaplashish.</p>",
+                "body-parts": "<h2>Body Parts</h2><p>Tanadagi a'zolar nomlari.</p>",
+                "clothes": "<h2>Clothes</h2><p>Kiyim-kechak nomlarini o'rganamiz.</p>",
+                "food": "<h2>Food</h2><p>Ovqat va ichimliklar haqida gaplashish.</p>",
+                "animals": "<h2>Animals</h2><p>Hayvonlarning nomlari va ovozlari.</p>",
+                "transportation": "<h2>Transportation</h2><p>Turli transport vositalari haqida o'rganamiz.</p>",
+                "she-has-he-has": "<h2>She has / He has</h2><p>Uning bor - she has / he has.</p>",
+                "pets": "<h2>Pets</h2><p>Uy hayvonlari haqida suhbatlashamiz.</p>",
+                "plural-nouns": "<h2>Plural Nouns</h2><p>Ko‘plikdagi otlarni o‘rganamiz.</p>",
+                "adjective": "<h2>Adjective</h2><p>Sifat so'zlari haqida tushuncha.</p>",
+                "be-helpful": "<h2>Be Helpful</h2><p>Yordam berishning ahamiyati haqida gaplashamiz.</p>",
+                "clothes-2": "<h2>Clothes</h2><p>Kiyim-kechak turlari.</p>",
+                "what-are-you-wearing": "<h2>What are you wearing?</h2><p>Bugun qanday kiyim kiyganingni tasvirlash.</p>",
+                "share-things": "<h2>Share Things</h2><p>Boshqalar bilan narsalarni bo‘lishish muhimligi.</p>",
+                "rooms": "<h2>Rooms</h2><p>Uy va xona turlari haqida suhbat.</p>",
+            };
+
+            document.getElementById("content").innerHTML = contents[topic] || "<h2>Mavzu topilmadi</h2>";
+        }
+    </script>
+
+</body>
+</html>

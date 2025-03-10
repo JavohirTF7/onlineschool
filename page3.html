@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O'quv kurslari</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .course {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+            cursor: pointer;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        #content {
+            background: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>O'quv kurslari</h1>
+    
+    <div class="course">
+        <h2>3-sinf</h2>
+        <ul>
+            <li><a onclick="loadContent('introductions')">Introductions</a></li>
+            <li><a onclick="loadContent('questions')">Questions</a></li>
+            <li><a onclick="loadContent('months')">Months</a></li>
+            <li><a onclick="loadContent('email-a-friend')">Email a friend</a></li>
+            <li><a onclick="loadContent('work-together')">Work together</a></li>
+            <li><a onclick="loadContent('pets')">Pets</a></li>
+            <li><a onclick="loadContent('adjectives')">Adjectives</a></li>
+            <li><a onclick="loadContent('whats-that')">What’s that?</a></li>
+            <li><a onclick="loadContent('respect-and-listen')">Respect and listen to others</a></li>
+            <li><a onclick="loadContent('what-are-you-doing')">What are you doing?</a></li>
+        </ul>
+    </div>
+
+    <div id="content">
+        <h2>Mavzuni tanlang</h2>
+        <p>Ushbu bo'limda mavzu tanlanganidan keyin kontent ko'rsatiladi.</p>
+    </div>
+
+    <script>
+        function loadContent(topic) {
+            const contents = {
+                "introductions": "<h2>Introductions</h2><p>Bu bo'limda o'quvchilar qanday qilib o'zlarini tanishtirishni o'rganishadi.</p>",
+                "questions": "<h2>Questions</h2><p>Savollar tuzish va javob berish qoidalarini o'rganamiz.</p>",
+                "months": "<h2>Months</h2><p>12 oy nomlarini o'rganamiz.</p>",
+                "email-a-friend": "<h2>Email a Friend</h2><p>Do'stga xat yozishni o'rganamiz.</p>",
+                "work-together": "<h2>Work Together</h2><p>Jamoada ishlash bo'yicha maslahatlar.</p>",
+                "pets": "<h2>Pets</h2><p>Uy hayvonlari va ular haqida gaplashish.</p>",
+                "adjectives": "<h2>Adjectives</h2><p>Sifatlar haqida ma'lumot.</p>",
+                "whats-that": "<h2>What’s that?</h2><p>Narsalarni qanday tasvirlashni o'rganamiz.</p>",
+                "respect-and-listen": "<h2>Respect and Listen</h2><p>Hurmat va tinglash muhimligi.</p>",
+                "what-are-you-doing": "<h2>What are you doing?</h2><p>Hozirgi davom etayotgan harakatlarni qanday ifodalash.</p>",
+            };
+
+            document.getElementById("content").innerHTML = contents[topic] || "<h2>Mavzu topilmadi</h2>";
+        }
+    </script>
+
+</body>
+</html>
