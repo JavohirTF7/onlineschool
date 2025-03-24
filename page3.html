@@ -36,14 +36,50 @@
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+        video, img {
+            display: block;
+            margin: 10px auto;
+            max-width: 100%;
+        }
+        .homework {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .homework div {
+            width: 45%;
+            text-align: center;
+        }
+        .homework img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .task-description {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+        .back-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .back-button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
 
-    <h1>O'quv kurslari</h1>
+    <h1>3-sinf o'quv kurslari</h1>
     
     <div class="course">
-        <h2>3-sinf</h2>
+        <h2>3-sinf mavzulari</h2>
         <ul>
             <li><a onclick="loadContent('introductions')">Introductions</a></li>
             <li><a onclick="loadContent('questions')">Questions</a></li>
@@ -75,7 +111,45 @@
                 "adjectives": "<h2>Adjectives</h2><p>Sifatlar haqida ma'lumot.</p>",
                 "whats-that": "<h2>What’s that?</h2><p>Narsalarni qanday tasvirlashni o'rganamiz.</p>",
                 "respect-and-listen": "<h2>Respect and Listen</h2><p>Hurmat va tinglash muhimligi.</p>",
-                "what-are-you-doing": "<h2>What are you doing?</h2><p>Hozirgi davom etayotgan harakatlarni qanday ifodalash.</p>",
+                "what-are-you-doing": `
+                    <h2>What are you doing?</h2>
+                   
+
+                    <!-- 1-topshiriq -->
+                    <h3>Exercise 1</h3>
+                    <div class="homework">
+                        <div>
+                            <img src="images/what_doing1.jpg" alt="What are you doing? Homework 1">
+                            
+                        </div>
+                        <div>
+                            <img src="images/what_doing2.jpg" alt="What are you doing? Homework 2">
+        
+                        </div>
+                    </div>
+
+                    <!-- 2-topshiriq -->
+                    <h3>Exercise 2</h3>
+                    <video width="600" controls>
+                        <source src="videos/what_doing_video1.mp4" type="video/mp4">
+                        Sizning brauzeringiz video formatini qo'llab-quvvatlamaydi.
+                    </video>
+                    <div class="task-description">
+                        <strong>Listening</strong> 
+                    </div>
+
+                    <!-- 3-topshiriq -->
+                    <h3>Exercise 3</h3>
+                    <video width="600" controls>
+                        <source src="videos/what_doing_video2.mp4" type="video/mp4">
+                        Sizning brauzeringiz video formatini qo'llab-quvvatlamaydi.
+                    </video>
+                    <div class="task-description">
+                        <strong>Speaking</strong> 
+                    </div>
+
+                    <button class="back-button" onclick="window.location.href='index.html'">Asosiy oynaga qaytish</button>
+                `,
             };
 
             document.getElementById("content").innerHTML = contents[topic] || "<h2>Mavzu topilmadi</h2>";

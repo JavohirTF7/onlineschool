@@ -36,6 +36,42 @@
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+        video, img {
+            display: block;
+            margin: 10px auto;
+            max-width: 100%;
+        }
+        .homework {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .homework div {
+            width: 45%;
+            text-align: center;
+        }
+        .homework img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .task-description {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+        .back-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .back-button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -69,10 +105,60 @@
                 "alphabet": "<h2>Alphabet</h2><p>Bu bo'limda bolalar A-Z harflarini o'rganishadi.</p>",
                 "numbers": "<h2>Numbers</h2><p>0 dan 10 gacha bo'lgan sonlarni sanash.</p>",
                 "colors": "<h2>Colors</h2><p>Ranglarni tanib olish va nomlash.</p>",
-                "family": "<h2>Family</h2><p>Oila a'zolarini tanishtirish.</p>",
+                "family": `
+                    <h2>Family</h2>
+                    <p>Oila a'zolarini tanishtirish.</p>
+                    <video width="600" controls>
+                        <source src="videos/family.mp4" type="video/mp4">
+                        Sizning brauzeringiz video formatini qo'llab-quvvatlamaydi.
+                    </video>
+                    <h3>Uyga vazifa</h3>
+                    <div class="homework">
+                        <div>
+                            <img src="images/family_hw1.jpg" alt="Family Homework 1">
+                            <div class="task-description">
+                                <strong>Exercise 1:</strong>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="images/family_hw2.jpg" alt="Family Homework 2">
+                            <div class="task-description">
+                                <strong>Exercise 2:</strong> make your own family tree
+                            </div>
+                        </div>
+                    </div>
+                    <button class="back-button" onclick="window.location.href='index.html'">Asosiy oynaga qaytish</button>
+                `,
                 "school": "<h2>School</h2><p>Maktabda ishlatiladigan so'zlar.</p>",
                 "toys": "<h2>Toys</h2><p>O'yinchoqlar haqida gaplashish.</p>",
-                "body-parts": "<h2>Body Parts</h2><p>Tanadagi a'zolar nomlari.</p>",
+                "body-parts": `
+                    <h2>Body Parts</h2>
+                    <p>Learning body parts.</p>
+                    <video width="600" controls>
+                        <source src="videos/body-parts.mp4" type="video/mp4">
+                        Sizning brauzeringiz video formatini qo'llab-quvvatlamaydi.
+                    </video>
+                    <h3>Uyga vazifa</h3>
+                    
+                        <div>
+                            <img src="images/body_hw1.jpg" alt="Body Parts Homework 1">
+                            <div class="task-description">
+                                <strong>Exercise 1</strong>
+                            </div>
+                        </div>
+                        <div>
+                            
+                            <video width="600" controls>
+                        <source src="videos/body-parts2.mp4" type="video/mp4">
+                        Sizning brauzeringiz video formatini qo'llab-quvvatlamaydi.
+                            </video>
+                            <div class="task-description">
+                                <strong>Exercise 2:</strong>  learning your body part with their tasks
+                            </div>
+                        </div>
+                    
+                    <button class="back-button" onclick="window.location.href='index.html'">Asosiy oynaga qaytish</button>
+                `,
                 "clothes": "<h2>Clothes</h2><p>Kiyim-kechak nomlarini o'rganamiz.</p>",
                 "food": "<h2>Food</h2><p>Ovqat va ichimliklar haqida gaplashish.</p>",
                 "animals": "<h2>Animals</h2><p>Hayvonlarning nomlari va ovozlari.</p>",

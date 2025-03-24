@@ -36,12 +36,48 @@
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+        iframe {
+            width: 100%;
+            height: 315px;
+            border: none;
+        }
+        .homework {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .homework div {
+            width: 45%;
+            text-align: center;
+        }
+        .homework img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .task-description {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+        .back-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .back-button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
+
+    <h1>2-sinf o'quv kurslari</h1>
     
-
-
     <div class="course">
         <h2>2-sinf mavzulari</h2>
         <ul>
@@ -66,26 +102,44 @@
     <script>
         function loadContent(topic) {
             const contents = {
-                "alphabet": "<h2>Alphabet</h2><p>Bu bo'limda bolalar A-Z harflarini o'rganishadi.</p>",
-                "numbers": "<h2>Numbers</h2><p>0 dan 10 gacha bo'lgan sonlarni sanash.</p>",
-                "colors": "<h2>Colors</h2><p>Ranglarni tanib olish va nomlash.</p>",
-                "family": "<h2>Family</h2><p>Oila a'zolarini tanishtirish.</p>",
-                "school": "<h2>School</h2><p>Maktabda ishlatiladigan so'zlar.</p>",
-                "toys": "<h2>Toys</h2><p>O'yinchoqlar haqida gaplashish.</p>",
-                "body-parts": "<h2>Body Parts</h2><p>Tanadagi a'zolar nomlari.</p>",
-                "clothes": "<h2>Clothes</h2><p>Kiyim-kechak nomlarini o'rganamiz.</p>",
-                "food": "<h2>Food</h2><p>Ovqat va ichimliklar haqida gaplashish.</p>",
-                "animals": "<h2>Animals</h2><p>Hayvonlarning nomlari va ovozlari.</p>",
                 "transportation": "<h2>Transportation</h2><p>Turli transport vositalari haqida o'rganamiz.</p>",
                 "she-has-he-has": "<h2>She has / He has</h2><p>Uning bor - she has / he has.</p>",
                 "pets": "<h2>Pets</h2><p>Uy hayvonlari haqida suhbatlashamiz.</p>",
                 "plural-nouns": "<h2>Plural Nouns</h2><p>Ko‘plikdagi otlarni o‘rganamiz.</p>",
-                "adjective": "<h2>Adjective</h2><p>Sifat so'zlari haqida tushuncha.</p>",
-                "be-helpful": "<h2>Be Helpful</h2><p>Yordam berishning ahamiyati haqida gaplashamiz.</p>",
-                "clothes-2": "<h2>Clothes</h2><p>Kiyim-kechak turlari.</p>",
-                "what-are-you-wearing": "<h2>What are you wearing?</h2><p>Bugun qanday kiyim kiyganingni tasvirlash.</p>",
-                "share-things": "<h2>Share Things</h2><p>Boshqalar bilan narsalarni bo‘lishish muhimligi.</p>",
-                "rooms": "<h2>Rooms</h2><p>Uy va xona turlari haqida suhbat.</p>",
+                "adjective": "<h2>Adjective</h2><p>Sifatlar haqida ma'lumot.</p>",
+                "be-helpful": "<h2>Be Helpful</h2><p>Yordam berish haqida gaplashamiz.</p>",
+                "clothes-2": "<h2>Clothes</h2><p>Kiyim-kechak nomlarini o'rganamiz.</p>",
+                "what-are-you-wearing": "<h2>What are you wearing?</h2><p>Kiyimlarni tasvirlashni o'rganamiz.</p>",
+                "share-things": "<h2>Share Things</h2><p>Narsalarni ulashish haqida gaplashamiz.</p>",
+                "rooms": `
+                    <h2>Rooms</h2>
+
+                    
+                    <div class="homework">
+                        <div>
+                            <img src="images/rooms_hw1.jpg" alt="Rooms Homework 1">
+                            <div class="task-description">
+                                <strong>Exercise 1</strong> 
+                            </div>
+                        </div>
+                        <div>
+                            <img src="images/rooms_hw2.jpg" alt="Rooms Homework 2">
+                            <div class="task-description">
+                                <strong>Exercise 2</strong> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2-topshiriq -->
+                    <h3>exercise 3</h3>
+                    <video width="600" controls>
+                        <source src="videos/rooms_video1.mp4" type="video/mp4">
+                        Sizning brauzeringiz video formatini qo'llab-quvvatlamaydi.
+                    </video>
+                    
+
+                    <button class="back-button" onclick="window.location.href='index.html'">Asosiy oynaga qaytish</button>
+                `,
             };
 
             document.getElementById("content").innerHTML = contents[topic] || "<h2>Mavzu topilmadi</h2>";
